@@ -17,10 +17,10 @@ jobs:
               uses: docker/login-action@v3
               with:
                 username: simeon10
-                password: 
+                password: ${{ secrets.DOCKER_PASS }}
             - name: Push image
               run:
-                docker push simeon10/cicd-portfoli
+                docker push simeon10/cicd-portfolio
 
         
                 

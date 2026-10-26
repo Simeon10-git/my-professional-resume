@@ -21,8 +21,8 @@ jobs:
             - name: Build Docker Image
               run: docker build -t 025392544161.dkr.ecr.us-east-1.amazonaws.com/my-repo:latest .
             
-            - name: Scan Docker Image with Trivy
-              uses: aquasecurity/trivy-action@0.28.0
+            - name: Scan image with Trivy
+              uses: aquasecurity/trivy-action@v0.36.0
               with: 
                 image-ref: 025392544161.dkr.ecr.us-east-1.amazonaws.com/my-repo:latest
                 format: table

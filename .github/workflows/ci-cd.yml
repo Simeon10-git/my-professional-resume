@@ -47,8 +47,8 @@ jobs:
               run: docker push ${{ secrets.ECR_REPO }}/my-repo:latest 
 
     Deploy_to_ecs:
+        needs: build_scan 
         runs-on: ubuntu-latest
         steps: 
             - name: Deploy to ECS 
               run: echo "Deploy to ecs"
-              
